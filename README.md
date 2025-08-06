@@ -1,6 +1,3 @@
-Here's a simple draft for your GitHub README in English:
-
----
 
 # Omni Motor Test with Teensy and GUI
 
@@ -76,7 +73,3 @@ odrv0.axis0.motor.config.torque_constant
 ---
 
 ✅ **Done!** You have completed all setup steps.
-
----
-
-Do you want me to also make a **cleaner, more professional GitHub-style version** with badges and section formatting so it looks polished? That would make it look more official.
