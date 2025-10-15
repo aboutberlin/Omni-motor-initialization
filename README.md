@@ -7,10 +7,49 @@ This repository contains a simple example code and GUI for testing an **Omni mot
 
 ---
 
+
 ## 📦 Files
 
 * **`test_two_motor.zip`** — Example code for Teensy to test Omni motors.
 * **`image.png`** — GUI demonstration image.
+
+## 📚 手册说明 / Manual Overview
+
+项目中共包含三个主要的手册，内容较多略显复杂。为帮助快速上手，我们建议重点阅读以下两个手册：
+
+There are **three main manuals** included in this project. The documentation is somewhat complex, so to get started efficiently, we recommend focusing on the following **two key manuals**:
+
+### ✅ 重点阅读 / Recommended to Read
+
+1. **守护兽驱动用户手册.docx**
+   **(Guardian BeastDriver User Manual)**
+   📘 **系统级手册，介绍整个系统的架构与使用方法。**
+   📘 *This is a system-level manual that explains the overall architecture and usage of the system.*
+
+2. **守护兽驱动协议手册.docx**
+   **(Guardian BeastDriver Protocol Manual)**
+   📗 **讲解如何将 CAN 协议转换为 C++ SDK，实现手动开发。**
+   📗 *Explains how to translate the CAN protocol into a C++ SDK manually.*
+
+---
+
+### 🚫 可忽略 / Not Required to Read
+
+3. **守护兽驱动SDK用户手册.docx**
+   **(Guardian Beast DriverSDKUser Manual)**
+   📄 **这是官方提供的完整 SDK 文档，但我们项目中不需要使用。**
+   📄 *This is the official SDK documentation, but it’s not required for our use case.*
+
+---
+
+## 📝 中英文手册对应关系 / Manual Language Mapping
+
+| 中文手册文件名           | English Manual Filename                   | 内容说明            | Description                   |
+| ----------------- | ----------------------------------------- | --------------- | ----------------------------- |
+| 守护兽驱动用户手册.docx    | Guardian BeastDriver User Manual.docx     | 系统级别使用说明        | System-level user manual      |
+| 守护兽驱动协议手册.docx    | Guardian BeastDriver Protocol Manual.docx | 协议转 SDK 开发指南    | Protocol-to-SDK guide         |
+| 守护兽驱动SDK用户手册.docx | Guardian Beast DriverSDKUser Manual.docx  | 官方 SDK 说明（不需要看） | Official SDK doc (not needed) |
+
 
 ---
 
