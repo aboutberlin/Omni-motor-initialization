@@ -107,8 +107,16 @@ odrv0.save_configuration()
 
 ```python
 odrv0.axis0.motor.config.torque_constant
+should = 0.06?
 ```
 
 ---
 
 ✅ **Done!** You have completed all setup steps.
+
+下面是一些测试方式
+首先需要将控制模式更改为力矩模式 odrv0.axis0.controller.config.control_mode = 1
+运行电机odrv0.axis0.requested_state = 8
+力矩控制的单位是 Nm（转子侧），而驱动器固件中电流单位是 A，所以还需要设置力矩常数，以让驱动器能够将 Nm 转换为电流，从而按需求驱动电机输出力矩。 # 力矩常数大约等于 odrv0.axis0.motor.config.torque_constant = 8.23/12.3
+
+首先需要将控制模式更改为力矩模式 odrv0.axis0.controller.config.control_mode = 直接力矩控制（Toruqe Control） 这是最简单的力矩（电流）控制模式，电机会以全力到达目标力矩，电机可能会很容易触发报警，所以我们并不推荐使用，使能如下： odrv0.axis0.controller.config.input_mode = 1
