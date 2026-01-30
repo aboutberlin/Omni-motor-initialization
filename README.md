@@ -1,3 +1,4 @@
+# 白的是0.0644，蓝的是0.0568.如果分不清楚，就白的喝白的成套
 
 # Omni Motor Test with Teensy and GUI
 
