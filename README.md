@@ -1,5 +1,16 @@
 # 白的是0.0644，蓝的是0.0568.如果分不清楚，就白的喝白的成套
 
+odrv0.axis0.motor.config.gear_ratio
+
+odrv0.axis0.controller.config.vel_limit
+odrv0.axis0.controller.config.enable_vel_limit
+odrv0.axis0.controller.config.enable_torque_mode_vel_limit
+odrv0.axis0.motor.fet_thermistor.config.enabled = True 
+odrv0.axis0.motor.motor_thermistor.config.enabled = True 
+odrv0.axis0.motor.config.current_lim
+odrv0.axis0.controller.config.torque_ramp_rate
+
+
 # Omni Motor Test with Teensy and GUI
 
 This repository contains a simple example code and GUI for testing an **Omni motor** using a **Teensy** microcontroller.
