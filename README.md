@@ -2,12 +2,22 @@
 
 odrv0.axis0.motor.config.gear_ratio
 
+odrv0.axis0.motor.config.torque_constant 
+
+
+
 odrv0.axis0.controller.config.vel_limit
+
 odrv0.axis0.controller.config.enable_vel_limit
+
 odrv0.axis0.controller.config.enable_torque_mode_vel_limit
+
 odrv0.axis0.motor.fet_thermistor.config.enabled = True 
+
 odrv0.axis0.motor.motor_thermistor.config.enabled = True 
+
 odrv0.axis0.motor.config.current_lim
+
 odrv0.axis0.controller.config.torque_ramp_rate
 
 
