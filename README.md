@@ -4,7 +4,15 @@ odrv0.axis0.motor.config.gear_ratio
 
 odrv0.axis0.motor.config.torque_constant 
 
+odrv0.axis0.config.can.motor_error_rate_ms = 10
 
+odrv0.axis0.motor.fet_thermistor.config.temp_limit_upper = 9999999
+
+odrv0.axis0.motor.motor_thermistor.config.temp_limit_upper = 9999999
+
+odrv0.axis0.motor.config.current_lim = 80
+
+odrv0.config.dc_max_positive_current = 200
 
 odrv0.axis0.controller.config.vel_limit = 9999999
 
