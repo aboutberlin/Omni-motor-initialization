@@ -15,6 +15,12 @@ odrv0.save_configuration()
 
 odrv0.reboot()
 
+odrv0.axis0.config.enable_watchdog
+
+odrv0.axis0.config.watchdog_timeout
+
+
+
 odrv0.axis0.requested_state = AXIS_STATE_CLOSED_LOOP_CONTROL
 
 odrv0.axis0.controller.input_torque = 0.2
