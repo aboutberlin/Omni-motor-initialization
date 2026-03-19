@@ -40,43 +40,32 @@ odrv0.config.enable_brake_resistor = True
   odrv0.save_configuration()                                  
                                 
 --------------------------------             
-odrv0.axis0.motor.config.gear_ratio
-
-odrv0.axis0.motor.config.torque_constant 
-
-odrv0.axis0.config.can.motor_error_rate_ms
-
-odrv0.axis0.motor.fet_thermistor.config.temp_limit_upper
-
-odrv0.axis0.motor.motor_thermistor.config.temp_limit_upper
-
-odrv0.axis0.motor.config.current_lim
-
-odrv0.config.dc_max_positive_current
-
-odrv0.axis0.controller.config.vel_limit
-
-odrv0.axis0.controller.config.enable_vel_limit
-
-odrv0.axis0.controller.config.enable_torque_mode_vel_limit
-
-odrv0.axis0.motor.fet_thermistor.config.enabled
-
-odrv0.axis0.motor.motor_thermistor.config.enabled
-
-odrv0.axis0.motor.config.current_lim
-
-odrv0.axis0.controller.config.torque_ramp_rate
-
-odrv0.config.dc_max_negative_current
-
-odrv0.config.dc_bus_overvoltage_trip_level                 
-
-odrv0.config.dc_bus_undervoltage_trip_level             
-
-odrv0.config.brake_resistance
-
-odrv0.config.enable_brake_resistor
+params = [                                                                    
+      ("gear_ratio", odrv0.axis0.motor.config.gear_ratio),                      
+      ("torque_constant", odrv0.axis0.motor.config.torque_constant),            
+      ("current_lim", odrv0.axis0.motor.config.current_lim),                    
+      ("vel_limit", odrv0.axis0.controller.config.vel_limit),                   
+      ("enable_vel_limit", odrv0.axis0.controller.config.enable_vel_limit),
+      ("enable_torque_mode_vel_limit",                                          
+  odrv0.axis0.controller.config.enable_torque_mode_vel_limit),                  
+      ("torque_ramp_rate", odrv0.axis0.controller.config.torque_ramp_rate),     
+      ("dc_max_positive_current", odrv0.config.dc_max_positive_current),        
+      ("dc_max_negative_current", odrv0.config.dc_max_negative_current),
+      ("dc_bus_overvoltage_trip_level",                                         
+  odrv0.config.dc_bus_overvoltage_trip_level),                                  
+      ("dc_bus_undervoltage_trip_level",
+  odrv0.config.dc_bus_undervoltage_trip_level),                                 
+      ("enable_brake_resistor", odrv0.config.enable_brake_resistor),
+      ("brake_resistance", odrv0.config.brake_resistance),                      
+      ("fet_therm_enabled", odrv0.axis0.motor.fet_thermistor.config.enabled),
+      ("fet_therm_limit",                                                       
+  odrv0.axis0.motor.fet_thermistor.config.temp_limit_upper),                    
+      ("motor_therm_enabled",                                                   
+  odrv0.axis0.motor.motor_thermistor.config.enabled),                           
+      ("motor_therm_limit",                                 
+  odrv0.axis0.motor.motor_thermistor.config.temp_limit_upper),                  
+  ]
+  for name, val in params: print(f"{name}: {val}")    
 
   
 # Omni Motor Test with Teensy and GUI
