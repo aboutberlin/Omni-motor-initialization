@@ -1,5 +1,33 @@
 import time
 
+def wd_status():
+    wd_en = bool(odrv0.axis0.config.enable_watchdog)
+    wd_to = float(odrv0.axis0.config.watchdog_timeout)
+    axis_err = int(odrv0.axis0.error)
+    wd_trip = bool(axis_err & 0x20)  # WATCHDOG_TIMER_EXPIRED
+    return wd_en, wd_to, wd_trip, axis_err
+
+while True:
+    try:
+        wd_en, wd_to, wd_trip, axis_err = wd_status()
+        print(
+            f"state={odrv0.axis0.current_state} "
+            f"wd_en={wd_en} wd_to={wd_to:.3f}s wd_trip={wd_trip} "
+            f"axis_err=0x{axis_err:X} "
+            f"vbus={odrv0.vbus_voltage:.2f} "
+            f"ibus={odrv0.ibus:.2f} "
+            f"vel={odrv0.axis0.encoder.vel_estimate:.3f} "
+            f"iq={odrv0.axis0.motor.current_control.Iq_measured:.3f}"
+        )
+    except Exception as e:
+        print("read_err:", e)
+    time.sleep(0.02)
+
+
+
+
+import time
+
 while True:
     try:
         print(
