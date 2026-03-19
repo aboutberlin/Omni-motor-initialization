@@ -1,3 +1,25 @@
+import time
+
+while True:
+    try:
+        print(
+            f"state={odrv0.axis0.current_state} "
+            f"axis_err=0x{int(odrv0.axis0.error):X} "
+            f"motor_err=0x{int(odrv0.axis0.motor.error):X} "
+            f"enc_err=0x{int(odrv0.axis0.encoder.error):X} "
+            f"ctrl_err=0x{int(odrv0.axis0.controller.error):X} "
+            f"sys_err=0x{int(odrv0.error):X} "
+            f"vbus={odrv0.vbus_voltage:.2f} "
+            f"ibus={odrv0.ibus:.2f} "
+            f"vel={odrv0.axis0.encoder.vel_estimate:.3f} "
+            f"iq={odrv0.axis0.motor.current_control.Iq_measured:.3f}"
+        )
+    except Exception as e:
+        print("read_err:", e)
+    time.sleep(0.02)  # 50Hz
+
+
+
 # 在 odrivetool 里执行
 # odrv0 = odrive.find_any()
 
