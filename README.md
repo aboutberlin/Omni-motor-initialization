@@ -28,6 +28,18 @@ odrv0.axis0.motor.config.current_lim  = 9999999
 
 odrv0.axis0.controller.config.torque_ramp_rate  = 9999999
 
+odrv0.config.dc_max_negative_current = -20   # 你现在是 
+
+odrv0.config.dc_bus_overvoltage_trip_level = 40             
+                                                              
+odrv0.config.dc_bus_undervoltage_trip_level = 10            
+                                                              
+odrv0.config.brake_resistance = 50  # 刹车电阻阻值
+odrv0.config.enable_brake_resistor = True                 
+                                                              
+  odrv0.save_configuration()                                  
+                                
+
 
 # Omni Motor Test with Teensy and GUI
 
