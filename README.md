@@ -1,6 +1,30 @@
 odrv0.axis0.controller.config.torque_ramp_rate = 20.0
+
 odrv0.axis0.config.can.motor_error_rate_ms = 0
+
 odrv0.save_configuration()
+
+
+odrv0.axis0.requested_state = AXIS_STATE_IDLE
+
+odrv0.axis0.config.enable_watchdog = True
+
+odrv0.axis0.config.watchdog_timeout = 0.3   # 先用 0.3s，后续可调 0.2~0.5
+
+odrv0.save_configuration()
+
+odrv0.reboot()
+
+odrv0.axis0.requested_state = AXIS_STATE_CLOSED_LOOP_CONTROL
+
+odrv0.axis0.controller.input_torque = 0.2
+
+# 不再发送任何命令，等待 >0.3s
+
+time.sleep(0.6)
+
+print(hex(int(odrv0.axis0.error)))   # 预期出现 watchdog 相关错误位
+
 
 
 
