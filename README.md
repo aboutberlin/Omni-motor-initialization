@@ -1,3 +1,10 @@
+odrv0.axis0.controller.config.torque_ramp_rate = 20.0
+odrv0.axis0.config.can.motor_error_rate_ms = 0
+odrv0.save_configuration()
+
+
+
+--------------------
 # 白的是0.0644，蓝的是0.0568.如果分不清楚，就白的喝白的成套
 
 odrv0.axis0.motor.config.gear_ratio
